@@ -48,6 +48,19 @@ Code, comments, file names: English
 - **Research agents:** Exploration, documentation reading — cost-efficient
 - **Coding agents:** Implementation, code generation — fresh context per task
 - **Reviewer/Debugger:** Testing, error finding — loop until green
+- **n8n Creator:** Automation channel — designs, builds, and deploys n8n workflows via MCP. Use when a task is recurring, scheduled, or event-driven. The rule: if it should run 24/7 without you, it belongs in n8n.
+
+### Claude vs. n8n — When to Use Which
+
+| Use Claude Code | Use n8n Creator |
+|----------------|----------------|
+| Complex business logic | Recurring scheduled tasks |
+| Custom code & analysis | Webhook-triggered automations |
+| One-time tasks & research | SaaS-to-SaaS integrations |
+| Architecture decisions | "Make this run automatically" |
+| Interactive workflows | Event-driven pipelines |
+
+**The key insight:** These are not alternatives — they are complements. Claude Code thinks and builds. n8n runs 24/7 without intervention. The final phase of many projects is handing off recurring tasks to n8n.
 
 ### Verification Before Done
 - Never mark a task complete without proving it works
