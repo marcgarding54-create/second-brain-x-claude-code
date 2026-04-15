@@ -19,20 +19,40 @@ This framework wires all three layers together into one coherent system.
 
 ## Three Layers, One System
 
-```
-┌─────────────────────────────────────────────────────┐
-│  VAULT LAYER (Obsidian + Claudian)                  │
-│  Think · Plan · Manage · Remember                   │
-│  Your Second Brain — strategic layer                │
-├─────────────────────────────────────────────────────┤
-│  CODE LAYER (Claude Code)                           │
-│  Build · Debug · Ship · Decide                      │
-│  Your development workspace — operative layer       │
-├─────────────────────────────────────────────────────┤
-│  AUTOMATION LAYER (n8n via n8n Creator)             │
-│  Run · Schedule · Integrate · Repeat                │
-│  Your 24/7 automation engine — execution layer      │
-└─────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph VAULT ["🧠 VAULT LAYER — Obsidian + Claudian"]
+        direction LR
+        V1[Projects & Goals]
+        V2[Daily Notes]
+        V3[Knowledge Base]
+        V4[Context Profile]
+    end
+
+    subgraph CODE ["⚙️ CODE LAYER — Claude Code"]
+        direction LR
+        C1[Build & Debug]
+        C2[Skills & Agents]
+        C3[Architecture]
+        C4[Knowledge Base]
+    end
+
+    subgraph AUTO ["🔄 AUTOMATION LAYER — n8n"]
+        direction LR
+        A1[Scheduled Tasks]
+        A2[Webhooks]
+        A3[Integrations]
+        A4[24/7 Pipelines]
+    end
+
+    VAULT -->|"plans & manages"| CODE
+    CODE -->|"deploys via n8n Creator"| AUTO
+    CODE -->|"learnings flow back"| VAULT
+    AUTO -->|"results & logs"| VAULT
+
+    style VAULT fill:#1e3a5f,stroke:#4a9eff,color:#ffffff
+    style CODE fill:#1a3a2a,stroke:#4aff88,color:#ffffff
+    style AUTO fill:#3a1e1e,stroke:#ff6b4a,color:#ffffff
 ```
 
 **The vault plans and manages → Claude Code builds and delivers → n8n runs it forever.**
@@ -106,6 +126,13 @@ second-brain-x-claude-code/
 - [Vault Layer](docs/vault-layer.md) — How the vault PM system works
 - [Code Layer](docs/code-layer.md) — How the Claude Code workspace works
 - [Skill System](docs/skill-system.md) — How Skills work and how to create new ones
+
+---
+
+## Contributing
+
+Built something new? Skills, patterns, and improvements flow back into the framework.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the exact steps — including how to generalize personal skills for the framework.
 
 ---
 
