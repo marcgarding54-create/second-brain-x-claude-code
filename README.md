@@ -116,24 +116,38 @@ The framework is built entirely from configuration files that Claude reads nativ
 ## Quick Start
 
 ### Prerequisites
-- [Obsidian](https://obsidian.md) — free
-- [Claude Code](https://claude.ai/code) — requires Claude subscription
-- [n8n](https://n8n.io) — optional, for automation deployment (self-hosted or cloud)
+- [Obsidian](https://obsidian.md) — free, no account required
+- [Claude Code CLI](https://claude.ai/code) — requires Claude subscription (Pro or above)
+- Node.js 18+ — required for Claude Code ([nodejs.org](https://nodejs.org))
+- [n8n](https://n8n.io) — optional, for automation deployment
 
 ### Setup (10 minutes)
 
-1. **Clone** this repository to your machine
+1. **Create a folder** — Name it `Second Brain` or `Project Manager`
    ```bash
-   git clone https://github.com/marcgarding54-create/second-brain-x-claude-code.git
+   mkdir ~/Second\ Brain
    ```
 
-2. **Vault** → Open Obsidian → "Open folder as vault" → select `vault-template/`
+2. **Install Claude CLI** and log in with your Anthropic account
+   ```bash
+   npm install -g @anthropic-ai/claude-code
+   claude
+   ```
 
-3. **Workspace** → Open a terminal in `workspace-template/` → run `claude`
+3. **Install Obsidian** → [obsidian.md](https://obsidian.md) → Open your folder as a vault
 
-4. **Onboarding** → In Obsidian, open `ONBOARDING.md` and tell Claude: *"Start onboarding"* — 5 questions, fully personalized in ~10 minutes
+4. **Install Claudian** via BRAT → Settings → Community plugins → BRAT → Add beta plugin:
+   ```
+   https://github.com/YishenTu/Claudian
+   ```
 
-5. **Optional: n8n** → Add your n8n instance URL + API key to Claude Code's MCP config to enable workflow deployment
+5. **Start onboarding** → Open Claudian chat and send:
+   > Hello Claude. Please install this repository into my vault and run the onboarding:
+   > https://github.com/marcgarding54-create/second-brain-x-claude-code
+
+   Claude sets up the vault structure and personalizes it in ~10 minutes.
+
+→ Full step-by-step guide with copy-paste commands: [docs/setup-guide.md](docs/setup-guide.md)
 
 That's it. The system is running on your machine.
 
