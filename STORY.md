@@ -57,4 +57,4 @@ Fork this. Make it yours. Start the onboarding flow. See what happens in ten min
 And if it helps, even a little — that's enough.
 
 **— Marc**
-*Team Leader. Builder. Four months in.*
+*Team Leader. . Four months in.*
