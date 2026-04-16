@@ -2,6 +2,14 @@
 
 > The combination of Superpowers and Get Shit Done — a framework that turns Obsidian + Claude Code + n8n into one unified AI-powered system running entirely on your machine.
 
+---
+
+> *"I have no IT education, no coding skills, no system administration background. None. Four months ago I was using AI the same way most people do — ask a question, get an answer, move on. This is what happened next."*
+>
+> — [Read the full story →](STORY.md)
+
+---
+
 ## The Problem This Solves
 
 Every developer working with AI eventually hits the same question:
@@ -180,14 +188,6 @@ second-brain-x-claude-code/
 - [Vault Layer](docs/vault-layer.md) — How the vault PM system works
 - [Code Layer](docs/code-layer.md) — How the Claude Code workspace works
 - [Skill System](docs/skill-system.md) — How Skills work and how to create new ones
-
----
-
-## The Story Behind This
-
-No tech background. No coding skills. Four months in.
-
-[Read how this framework came to be →](STORY.md)
 
 ---
 
