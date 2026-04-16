@@ -1,4 +1,4 @@
-# Second Brain × Claude Code
+# Second Brain × Claude Code × n8n
 
 > The combination of Superpowers and Get Shit Done — a framework that turns Obsidian + Claude Code + n8n into one unified AI-powered system running entirely on your machine.
 
@@ -167,10 +167,73 @@ second-brain-x-claude-code/
 - **Session Routines** — Automatic daily notes, project status updates, and context management.
 - **Knowledge Base** — Structured long-term memory with INDEX-first loading (minimal context use).
 
-### Code Layer
-- **8 Pre-built Skills** — security, QA, research, frontend, architecture, backend, Supabase, and **n8n Creator**.
-- **Subagent Team Model** — Orchestrator + specialist agents with clear model selection (haiku/sonnet/opus).
-- **Rules System** — Modular `.claude/rules/` files for consistent behavior across sessions.
+### Code Layer — The Agent Team
+
+Eight pre-built skills, each a specialist that knows its domain. The orchestrator (your main Claude Code session) coordinates them. You describe what you need — the right agent handles it.
+
+---
+
+#### 🎨 Frontend Specialist
+Translates designs into production-ready UI. Before writing a single line of code, it asks the right questions — layout intent, responsive breakpoints, interaction states, accessibility requirements. No surprises halfway through.
+
+Built on two combined skillsets: bold aesthetic design principles (anti-generic, high visual quality) and a library of 67 UI styles, 161 color palettes, and 57 font pairings to draw from. Plus integration with component inspiration tools for when you need a reference.
+
+*Triggers: UI components, pages, layouts, Figma designs, responsive design*
+
+---
+
+#### 🔒 Security Agent
+Runs before every public push, every repo visibility change, every shared build. Scans for secrets in code, leaked credentials in git history, incomplete `.gitignore` patterns, and PII in test data. Returns a clean/warning/critical verdict with exact file, line, and fix guidance.
+
+The rule: it never says "looks fine" without having actually checked the git history.
+
+*Triggers: before git push, before making a repo public, end of coding session*
+
+---
+
+#### ⚙️ Backend Agent
+Designs and implements APIs, database schemas, authentication logic, and server-side processing. Pattern-first: checks what already exists in the codebase before introducing anything new. Security by default — parameterized queries, no secrets in logs, input validation at boundaries.
+
+*Triggers: REST/GraphQL APIs, database design, server logic, performance issues*
+
+---
+
+#### 🏗️ Solution Architect
+For decisions that are hard to reverse. Stack choices, infrastructure design, authentication strategy, database selection. Returns a full ADR (Architecture Decision Record): chosen option, rejected alternatives with reasons, data flow sketch, risks, next steps. Written to your Knowledge Base so future sessions can reference it.
+
+*Triggers: new project stack, major architecture decisions, scaling questions*
+
+---
+
+#### 🔬 Research Agent
+Deep research with structured output. Checks your Knowledge Base first (what do you already know?), then official documentation, then web search. Always returns: TL;DR, key findings with sources, recommendation, open questions. Never freeform prose.
+
+Cost-efficient by design — runs on the faster, lighter model.
+
+*Triggers: unknown libraries, stack comparisons, best practices, "how does X work"*
+
+---
+
+#### ✅ QA Agent
+Independent verification. Runs the full test suite, validates the build, checks edge cases, loops until green. The rule: a "done" claim is not accepted without proof. Never skips tests, never suppresses failures.
+
+*Triggers: before every commit, after bug fixes, on CI failures, "is this actually working?"*
+
+---
+
+#### 🗄️ Supabase Agent
+Supabase-specific development: Row Level Security policies, Edge Functions, Auth configuration, Storage rules, database migrations. Knows the critical security traps (RLS on every table, JWT handling, view permissions). Every schema change as a migration — never direct SQL in production.
+
+*Triggers: any project using Supabase*
+
+---
+
+#### 🔄 n8n Creator
+See [Automation Layer](#automation-layer-n8n-creator) below.
+
+---
+
+**Subagent Model:** The main session orchestrates. Specialists run in fresh isolated contexts — no context pollution, parallel execution where possible. Model selection by task: haiku for research, sonnet for implementation, opus for architecture.
 
 ### Automation Layer (n8n Creator)
 - **Full deploy pipeline** — From natural language requirements to live n8n workflow in one session.
