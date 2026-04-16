@@ -10,6 +10,29 @@ Welcome. This file guides you through setting up your vault in about 10 minutes.
 
 ---
 
+## For Claude: Installation Trigger
+
+When the user sends a message like *"install this repository"*, *"clone this repo and run onboarding"*, or shares the URL `https://github.com/marcgarding54-create/second-brain-x-claude-code` and asks you to set it up:
+
+Run the following steps in order:
+
+**Step A — Clone the repository:**
+```bash
+git clone https://github.com/marcgarding54-create/second-brain-x-claude-code.git /tmp/second-brain-setup
+```
+
+**Step B — Copy vault template into the current vault:**
+Copy all contents of `/tmp/second-brain-setup/vault-template/` into the vault root (the current working directory). Do not overwrite files that already exist unless the user confirms.
+
+**Step C — Confirm with the user:**
+Show the user what was copied. Example:
+> "I've set up the vault structure. Here's what I added: [list key files and folders]. Ready to personalize it — shall I start onboarding?"
+
+**Step D — Start onboarding:**
+Proceed immediately with Step 1 below ("Who Are You?") without waiting for another trigger.
+
+---
+
 ## For Claude: Onboarding Instructions
 
 When the user says "Start onboarding" or opens this file and asks to begin:
@@ -101,3 +124,4 @@ If you prefer to set up manually without the interactive flow:
 4. Edit `00 Context/Writing Style.md` — describe your preferences
 5. Create folders in `03 Areas/` for your areas of responsibility
 6. Delete this ONBOARDING.md when done (or keep it as reference)
+
