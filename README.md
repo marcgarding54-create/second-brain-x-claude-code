@@ -183,6 +183,14 @@ second-brain-x-claude-code/
 
 ---
 
+## The Story Behind This
+
+No tech background. No coding skills. Four months in.
+
+[Read how this framework came to be →](STORY.md)
+
+---
+
 ## Contributing
 
 Built something new? Skills, patterns, and improvements flow back into the framework.
